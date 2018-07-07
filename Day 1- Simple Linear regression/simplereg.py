@@ -2,9 +2,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-data = pd.read_csv('../#100daysofMlcode/Day 1- Simple Linear regression/Salary_Data.csv')
-x = data.iloc[0:16, :-1].values
-y = data.iloc[0:16, 1].values
+data = pd.read_csv('../100daysofMlcode/Day 1- Simple Linear regression/Salary_Data.csv')
+x = data.iloc[:, :-1].values
+y = data.iloc[:, 1].values
 #print(y)
 print(x)
 print(data.shape)
