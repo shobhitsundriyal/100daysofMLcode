@@ -4,7 +4,7 @@ import math
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-train_data = pd.read_csv("../100daysofMLcode/Day 4- Logistic Regression/Titanic Train Data.csv")
+train_data = pd.read_csv("../100daysofMLcode/Day 4- Logistic  Regression/Titanic Train Data.csv")
 train_data.head()
 
 sns.countplot(x='Survived', data=train_data)
@@ -45,7 +45,7 @@ logmodel = rg()
 logmodel.fit(x, y)
 
 #Test
-test_data = pd.read_csv('../100daysofMLcode/Day 4- Logistic Regression/test.csv')
+test_data = pd.read_csv('../100daysofMLcode/Day 4- Logistic  Regression/test.csv')
 test_data.isnull().sum()
 test_data.drop('Cabin', axis=1, inplace=True,)
 test_data.head()
@@ -80,9 +80,9 @@ pred = logmodel.predict(test_data)
 pred
 len(pred)
 
-t = pd.read_csv('../100daysofMLcode/Day 4- Logistic Regression/test.csv')
+t = pd.read_csv('../100daysofMLcode/Day 4- Logistic  Regression/test.csv')
 #final = {'PassengerId':t['PassengerId'], 'Survived':pred}
 final = pd.DataFrame(data={'PassengerId':t['PassengerId'], 'Survived':pred})
 final
 #final.drop(final[''])
-final.to_csv('../100daysofMLcode/Day 4- Logistic Regression/Submit.csv', sep=',')
+final.to_csv('../100daysofMLcode/Day 4- Logistic  Regression/Submit.csv', sep=',')
