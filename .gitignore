@@ -1,0 +1,25 @@
+$ git status
+  [...]
+  # Untracked files:
+  [...]
+  #       Documentation/foo.html
+  #       Documentation/gitignore.html
+  #       file.o
+  #       .gitignore
+  #       src/internal.o
+  #       100daysofMLcode/Day 4- Logistic Regression/*.csv
+  [...]
+  $ cat .git/info/exclude
+  # ignore objects and archives, anywhere in the tree.
+  *.[oa]
+  $ cat Documentation/.gitignore
+  # ignore generated html files,
+  *.html
+  # except foo.html which is maintained by hand
+  !foo.html
+  $ git status
+  [...]
+  # Untracked files:
+  [...]
+  #       Documentation/foo.html
+  [...]
