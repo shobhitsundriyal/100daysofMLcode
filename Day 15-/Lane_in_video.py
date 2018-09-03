@@ -54,7 +54,7 @@ def average_slope_intercept(image, lines):
     return np.array([left_line, right_line])
 
 cap = cv2.VideoCapture('../100daysofMLcode/Day 15-/test_video.mp4')
-video = cv2.VideoWriter('../100daysofMLcode/Day 15-/detected.avi', cv2.VideoWriter_fourcc('M','J','P','G'), 50, (1280,720), 1)
+video = cv2.VideoWriter('../100daysofMLcode/Day 15-/detected.mp4', cv2.VideoWriter_fourcc('M','J','P','G'), 50, (1280,720), 1)
 while(cap.isOpened()):
     _, frame = cap.read()
     canny_image = canny(frame)
