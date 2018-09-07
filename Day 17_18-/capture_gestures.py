@@ -13,7 +13,7 @@ def create_folder(folder_name):
 
 def strore_images(gesture_id):
     total_pics = 1200
-    x,y,w,h = 350,50,350,350
+    x,y,w,h = 620,0,350,350
 
     create_folder('../100daysofMLcode/DataSet/Gestures/'+str(gesture_id))
     pic_no = 0
@@ -24,7 +24,7 @@ def strore_images(gesture_id):
         frame_np = np.array(bytearray(frame_url.read()))
         frame = cv2.imdecode(frame_np, -1)
         hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-        mask2 = cv2.inRange(hsv, np.array([2,50,60]), np.array([25,155,255]))#Skin Color
+        mask2 = cv2.inRange(hsv, np.array([84, 67, 78]), np.array([152, 134, 132]))#Skin Color
         res = cv2.bitwise_and(frame, frame, mask=mask2)
         gray = cv2.cvtColor(res, cv2.COLOR_BGR2GRAY)
         median = cv2.GaussianBlur(gray,(5,5),0)
