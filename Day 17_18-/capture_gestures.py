@@ -24,7 +24,7 @@ def strore_images(gesture_id):
         frame_np = np.array(bytearray(frame_url.read()))
         frame = cv2.imdecode(frame_np, -1)
         hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-        mask2 = cv2.inRange(hsv, np.array([84, 67, 78]), np.array([152, 134, 132]))#Skin Color
+        mask2 = cv2.inRange(hsv, np.array([92,56,54]), np.array([225,184,153]))#Skin Color
         res = cv2.bitwise_and(frame, frame, mask=mask2)
         gray = cv2.cvtColor(res, cv2.COLOR_BGR2GRAY)
         median = cv2.GaussianBlur(gray,(5,5),0)
